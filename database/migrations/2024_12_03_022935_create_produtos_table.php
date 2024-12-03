@@ -11,14 +11,16 @@ return new class extends Migration
      */
     public function up(): void
     {
-      Schema::create('produtos', function (Blueprint $table) {
-          $table->id();
-          $table->string('nome', 255);
-          $table->tinyInteger('status');
-          $table->integer('estoque');
-          $table->string('fornecedor', 255);
-          $table->timestamps();
-      });
+      if (!Schema::hasTable('produtos')) {
+        Schema::create('produtos', function (Blueprint $table) {
+            $table->id();
+            $table->string('nome');
+            $table->tinyInteger('status');
+            $table->integer('estoque');
+            $table->string('fornecedor');
+            $table->timestamps();
+        });
+      }
     }
 
     /**
