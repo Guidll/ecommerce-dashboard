@@ -45,7 +45,7 @@
           <div class="grid gap-1 font-medium">
             <div class="px-3 py-1 rounded-lg">Inicio</div>
             <div class="px-3 py-1 rounded-lg">Pedidos</div>
-            <div class="px-3 py-1 font-bold rounded-lg bg-neutral-50">Produtos</div>
+            <a href="{{ route('produtos.index') }}" class="px-3 py-1 font-bold rounded-lg bg-neutral-50">Produtos</a>
             <div class="px-3 py-1 rounded-lg">Clientes</div>
             <div class="px-3 py-1 rounded-lg">Fornecedores</div>
             <div class="h-px bg-neutral-300"></div>
